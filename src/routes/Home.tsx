@@ -2,49 +2,54 @@ import type { CharacterProps } from "../types/Characters";
 
 // Components
 import Search from "../components/Search";
+import CharacterCard from "../components/CharacterCard";
 
 import { useState } from "react";
 
 const Home = () => {
-  const [character, setCharacter] = useState<CharacterProps | null>(null);
+  const [character, setCharacter] = useState<CharacterProps[]>([]);
 
-  const loadCharacter = async (CharacterName: string) => {
-    const res = await fetch(
-      `https://rickandmortyapi.com/api/character/?name=${CharacterName}`,
-    );
-    const data = await res.json();
+  const loadCharacter = async (characterName: string) => {
+    try {
+      const res = await fetch(
+        `https://rickandmortyapi.com/api/character/?name=${characterName}`,
+      );
 
-    const { name, status, species, gender, origin, location, id, image } =
-      data.results[0];
+      if (!res.ok) {
+        throw new Error("Personagem não encontrado");
+      }
 
-    const characterData: CharacterProps = {
-      id,
-      name,
-      status,
-      species,
-      gender,
-      origin,
-      location,
-      image,
-    };
+      const data = await res.json();
 
-    setCharacter(characterData);
+      const charactersData: CharacterProps[] = data.results.map(
+        (character: CharacterProps) => ({
+          id: character.id,
+          name: character.name,
+          status: character.status,
+          species: character.species,
+          gender: character.gender,
+          origin: {
+            name: character.origin.name,
+          },
+          location: {
+            name: character.location.name,
+          },
+          image: character.image,
+        }),
+      );
+
+      setCharacter(charactersData);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
     <div>
       <Search loadCharacter={loadCharacter} />
-      {character && (
-        <div>
-          <h2>{character.name}</h2>
-          <p>Status: {character.status}</p>
-          <p>Species: {character.species}</p>
-          <p>Gender: {character.gender}</p>
-          <p>Origin: {character.origin.name}</p>
-          <p>Location: {character.location.name}</p>
-          <img src={character.image} alt={character.name} />
-        </div>
-      )}
+      {character.map((char) => (
+        <CharacterCard key={char.id} character={char} />
+      ))}
     </div>
   );
 };

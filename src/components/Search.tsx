@@ -1,23 +1,33 @@
 type SearchProps = {
-  loadCharacter: (CharacterName: string) => Promise<void>;
+  loadCharacter: (characterName: string) => Promise<void>;
 };
 
 import { useState } from "react";
+
+// CSS
+import classes from "./Search.module.css";
+
+// Icons
+import { FaSearch } from "react-icons/fa";
 
 const Search = ({ loadCharacter }: SearchProps) => {
   const [characterName, setCharacterName] = useState("");
 
   return (
-    <div>
-      <h2>Coloque o nome do personagem:</h2>
-      <input
-        type="text"
-        placeholder="Nome do personagem"
-        id="characterName"
-        onChange={(e) => setCharacterName(e.target.value)}
-      />
+    <div className={classes.search}>
+      <h2>Search a Character:</h2>
+      <div className={classes.searchContainer}>
+        <input
+          type="text"
+          placeholder="Name of the character"
+          id="characterName"
+          onChange={(e) => setCharacterName(e.target.value)}
+        />
 
-      <button onClick={() => loadCharacter(characterName)}>Pesquisar</button>
+        <button onClick={() => loadCharacter(characterName)}>
+          <FaSearch />
+        </button>
+      </div>
     </div>
   );
 };

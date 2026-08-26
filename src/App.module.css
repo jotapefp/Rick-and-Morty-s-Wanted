@@ -1,0 +1,14 @@
+.app {
+  text-align: center;
+}
+
+.app h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.app h1 img {
+  width: auto;
+  height: auto;
+  max-width: 90%;
+}
