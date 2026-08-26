@@ -1,12 +1,25 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Bangers", sans-serif;
-  border-radius: 5px;
+:root {
+  --void: #0d0f0e;
+  --portal: #97ce4c;
+  --toxic-cyan: #5ab9c4;
+  --panel: #1a1d1b;
+  --rust: #c9a876;
+  --alert: #e8544a;
+
+  --font-display: "Orbitron", sans-serif; 
+  --font-glitch:
+    "Rubik Glitch", cursive; 
+  --font-mono:
+    "Space Mono", monospace; 
 }
 
 body {
-  background-color: #000;
+  background-color: var(--void);
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(151, 206, 76, 0.06),
+    transparent 60%
+  );
+  color: var(--rust);
+  font-family: var(--font-mono);
 }
-

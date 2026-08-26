@@ -1,11 +1,16 @@
-.navbar h2{
-  color: #fff;
-  margin-top: 1rem;
-  margin-bottom: 5rem;
-  padding: 1rem 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid #1A1A1A;
+.navbar {
+  background: var(--panel);
+  border-bottom: 1px solid rgba(151, 206, 76, 0.2);
+  padding: 1rem 2rem;
 }
 
+.navbar a {
+  font-family: var(--font-display);
+  color: var(--portal);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+}
+
+.navbar a:hover {
+  text-shadow: 0 0 8px rgba(151, 206, 76, 0.6);
+}

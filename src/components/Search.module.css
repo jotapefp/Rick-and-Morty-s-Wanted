@@ -1,43 +1,42 @@
+
 .search h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-  color: #97ce4c;
-
-  -webkit-text-stroke: 1px #087f8f;
-
-  text-shadow:
-    0 0 3px #00b5cc,
-    0 0 8px #97ce4c,
-    0 0 15px #97ce4c,
-    0 0 25px #60a83f;
+  font-family: var(--font-display);
+  color: var(--portal);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 1.1rem; 
 }
 
 .searchContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  gap: 0;
 }
 
 .searchContainer input {
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  border: none;
-  width: 80%;
-  max-width: 400px;
+  background: var(--panel);
+  border: 1px solid rgba(151, 206, 76, 0.3);
+  border-right: none;
+  color: var(--rust);
+  font-family: var(--font-mono);
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchContainer input:focus {
+  border-color: var(--portal);
+  box-shadow: 0 0 12px rgba(151, 206, 76, 0.4);
 }
 
 .searchContainer button {
-  padding: 0.45rem;
-  font-size: 1.2rem;
+  background: var(--portal);
   border: none;
+  color: var(--void); 
+  padding: 0 1rem;
   cursor: pointer;
-  color: #000;
+  transition: filter 0.2s ease;
 }
 
 .searchContainer button:hover {
-  color: #087f8f;
-  background-color: #97ce4c;
+  filter: brightness(1.15);
 }
