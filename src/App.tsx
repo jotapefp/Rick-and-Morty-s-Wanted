@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import { CharacterProvider } from "./context/CharacterContext";
 
 import classes from "./App.module.css";
-import logo from "./img/rick-and-morty-logo.png";
+import logo from "./assets/Rick_and_Morty.svg";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <div className={classes.app}>
         <Navbar />
         <h1>
-          <img src={logo} alt="Rick and Morty Logo" />
+          <img src={logo} alt="Rick and Morty's Wanted" />
         </h1>
         <div className={classes.content}>
           <Outlet />
