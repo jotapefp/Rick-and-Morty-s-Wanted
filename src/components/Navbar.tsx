@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className={classes.navbar}>
       <h2>
-        <Link to="/" onClick={resetSearch}>
+        <Link className={classes.Home} to="/" onClick={resetSearch}>
           Home
         </Link>
       </h2>

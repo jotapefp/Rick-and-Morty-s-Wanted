@@ -21,7 +21,6 @@ const Search = ({ loadCharacter }: SearchProps) => {
   return (
     <div className={classes.search}>
       <h2>Search a Character:</h2>
-
       <div className={classes.searchContainer}>
         <input
           type="text"
@@ -30,7 +29,6 @@ const Search = ({ loadCharacter }: SearchProps) => {
           onChange={(e) => setCharacterName(e.target.value)}
           onKeyDown={handleKeyDown}
         />
-
         <button onClick={() => loadCharacter(characterName)}>
           <FaSearch />
         </button>

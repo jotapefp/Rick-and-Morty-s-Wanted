@@ -15,9 +15,7 @@ function App() {
         <h1>
           <img src={logo} alt="Rick and Morty's Wanted" />
         </h1>
-        <div className={classes.content}>
-          <Outlet />
-        </div>
+        <Outlet />
         <Footer />
       </div>
     </CharacterProvider>

@@ -1,16 +1,21 @@
 .navbar {
-  background: var(--panel);
-  border-bottom: 1px solid rgba(151, 206, 76, 0.2);
-  padding: 1rem 2rem;
+  font-size: 2rem;
+  border-bottom: 2px solid #0f0f0f;
+  margin-bottom: 5rem;
+  background-color: #000;
 }
 
-.navbar a {
-  font-family: var(--font-display);
-  color: var(--portal);
-  text-decoration: none;
-  letter-spacing: 0.08em;
+.navbar h2 {
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
 }
 
-.navbar a:hover {
-  text-shadow: 0 0 8px rgba(151, 206, 76, 0.6);
+.Home {
+  color: #01b4c6;
+  font-family: "Bangers";
+}
+
+.Home:hover {
+  color: #97ce4c;
 }
