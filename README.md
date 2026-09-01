@@ -32,3 +32,16 @@ Atualmente, a busca retorna **apenas a primeira página** de resultados da API. 
 - [ ] Página de detalhes por personagem
 - [ ] Implementação da escolha de idioma (inglês, espanhol e português)
 - [ ] Possibilidade de favoritar um ou mais personagens
+
+### 📎 Créditos e referências
+
+Este projeto utiliza assets e recursos de terceiros, listados abaixo com os devidos créditos:
+
+- **Ícone do site**: [Rick and Morty Icons — Icons8](https://icons8.com.br/icons/set/rick-e-morty)
+- **Imagem do título (logo)**: [Rick and Morty logo — Wikimedia Commons](https://upload.wikimedia.org/wikipedia/commons/b/b1/Rick_and_Morty.svg)
+- **Fontes**:
+  - [Get Schwifty, por Jonizaak — DeviantArt](https://www.deviantart.com/jonizaak/art/Get-Schwifty-A-Rick-and-Morty-font-638073728)
+  - [Bangers — Google Fonts](https://fonts.google.com/specimen/Bangers)
+- **Dados dos personagens**: [Rick and Morty API](https://rickandmortyapi.com/)
+
+*Rick and Morty é uma propriedade intelectual da Adult Swim. Este é um projeto não-comercial, feito exclusivamente para fins de estudo e portfólio.*
