@@ -2,7 +2,7 @@
 
 Projeto autoral desenvolvido para fins de estudo, com o objetivo de praticar consumo de API, componentização em React e boas práticas de desenvolvimento front-end usando TypeScript.
 
-Link para teste https://rick-and-morty-wanted.vercel.app/
+##Link para teste https://rick-and-morty-wanted.vercel.app/
 
 ### 🧪 Tecnologias utilizadas
 
