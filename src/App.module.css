@@ -1,5 +1,4 @@
 .app {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -8,8 +7,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.app footer {
-  margin-top: auto;
+  margin-bottom: 2rem;
 }

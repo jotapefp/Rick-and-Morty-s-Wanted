@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  font-family: "Get Schwifty";
 }
 
 ul {
@@ -14,6 +13,7 @@ a {
 body {
   background: #000;
   overflow-x: hidden;
+  font-family: "Get Schwifty";
 }
 
 /* Font */

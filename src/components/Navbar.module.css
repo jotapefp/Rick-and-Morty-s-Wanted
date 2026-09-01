@@ -12,10 +12,10 @@
 }
 
 .Home {
-  color: #01b4c6;
+  color: #97ce4c;
   font-family: "Bangers";
 }
 
 .Home:hover {
-  color: #97ce4c;
+  color: #01b4c6;
 }

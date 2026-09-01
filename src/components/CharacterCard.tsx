@@ -4,7 +4,6 @@ import classes from "./CharacterCard.module.css";
 
 // Print the character information in a card format
 const CharacterCard = ({
-  id,
   name,
   status,
   species,
@@ -16,12 +15,29 @@ const CharacterCard = ({
   return (
     <div className={classes.characterComponent}>
       <div className={classes.characterCard}>
-        <h3>{name} e ID: {id}</h3>
-        <p>State: {status}</p>
-        <p>Species: {species}</p>
-        <p>Gender: {gender}</p>
-        <p>Origin: {origin?.name}</p>
-        <p>Location: {location?.name}</p>
+        <h3>{name}</h3>
+
+        <p>
+          Status:{" "}
+          <span className={classes[status.toLowerCase()]}>{status}</span>
+        </p>
+
+        <p>
+          Species: <span>{species}</span>
+        </p>
+
+        <p>
+          Gender: <span>{gender}</span>
+        </p>
+
+        <p>
+          Origin: <span>{origin?.name}</span>
+        </p>
+
+        <p>
+          Location: <span>{location?.name}</span>
+        </p>
+
         <img src={image} alt={name} />
       </div>
     </div>

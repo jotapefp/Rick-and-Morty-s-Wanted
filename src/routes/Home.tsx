@@ -1,7 +1,7 @@
 import Search from "../components/Search";
 import CharacterCard from "../components/CharacterCard";
-import Error from "../components/Error";
 import { useCharacterContext } from "../context/CharacterContext";
+import classes from "./Home.module.css";
 
 const Home = () => {
   const { characters, error, loadCharacter, resetKey } = useCharacterContext();
@@ -9,12 +9,14 @@ const Home = () => {
   return (
     <div>
       <Search key={resetKey} loadCharacter={loadCharacter} />
-
-      {characters.map((character) => (
-        <CharacterCard key={character.id} {...character} />
-      ))}
-
-      {error && <Error />}
+      <div className={classes.characterList}>
+        {characters.map((character) => (
+          <CharacterCard key={character.id} {...character} />
+        ))}
+      </div>
+      <div className={classes.error}>
+        {error && <p>Character not found in this dimension</p>}
+      </div>
     </div>
   );
 };
