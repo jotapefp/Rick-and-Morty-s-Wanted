@@ -32,6 +32,7 @@ Atualmente, a busca retorna **apenas a primeira página** de resultados da API. 
 - [ ] Página de detalhes por personagem
 - [ ] Implementação da escolha de idioma (inglês, espanhol e português)
 - [ ] Possibilidade de favoritar um ou mais personagens
+- [ ] Compatibilidade com diferentes tamanhos de tela
 
 ### 📎 Créditos e referências
 
