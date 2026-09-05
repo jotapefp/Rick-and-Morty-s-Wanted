@@ -9,10 +9,21 @@ const Navbar = () => {
   return (
     <div className={classes.navbar}>
       <h2>
-        <Link className={classes.Home} to="/" onClick={resetSearch}>
+        <Link to="/" onClick={resetSearch} className={classes.titles}>
           Home
         </Link>
       </h2>
+      <ul>
+        <li>
+          <Link
+            to="/character"
+            onClick={resetSearch}
+            className={classes.titles}
+          >
+            Characters
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };

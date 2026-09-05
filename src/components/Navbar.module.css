@@ -1,21 +1,18 @@
 .navbar {
-  font-size: 2rem;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   border-bottom: 2px solid #0f0f0f;
-  margin-bottom: 5rem;
   background-color: #000;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.navbar h2 {
-  margin-bottom: 0.5rem;
-  margin-left: 1.5rem;
-  margin-top: 1rem;
-}
-
-.Home {
+.titles{
   color: #97ce4c;
-  font-family: "Bangers";
 }
-
-.Home:hover {
+.titles:hover {
   color: #01b4c6;
 }

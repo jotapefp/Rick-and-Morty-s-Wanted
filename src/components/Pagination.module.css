@@ -1,0 +1,51 @@
+/* Pagination.module.css */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap; /* evita que os números "estourem" a tela se forem muitos */
+  margin: 2rem 0;
+}
+
+.pagination button {
+  background: var(--panel, #1a1d1b);
+  border: 1px solid rgba(151, 206, 76, 0.25); /* borda sutil na cor do portal */
+  color: var(--rust, #c9a876);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.9rem;
+  min-width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pagination button:hover {
+  border-color: var(--portal, #97ce4c);
+  color: var(--portal, #97ce4c);
+}
+
+/* Página atual: precisa se destacar claramente das outras,
+   já que num fundo escuro é fácil o usuário se perder em qual página está */
+.pagination button.active {
+  background: var(--portal, #97ce4c);
+  border-color: var(--portal, #97ce4c);
+  color: var(
+    --void,
+    #0d0f0e
+  ); /* texto escuro sobre fundo verde vibrante = contraste forte */
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(151, 206, 76, 0.5); /* leve glow, reforça o estado ativo */
+}
+
+/* Acessibilidade: contorno visível ao navegar por teclado (Tab),
+   sem depender só de :hover, que não funciona pra quem não usa mouse */
+.pagination button:focus-visible {
+  outline: 2px solid var(--portal, #97ce4c);
+  outline-offset: 2px;
+}

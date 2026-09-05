@@ -7,17 +7,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // Pages
 import Home from "./routes/Home.tsx";
+import Characters from "./routes/Characters.tsx";
+import CharacterDetails from "./routes/CharacterDetails.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      
+      { path: "/", element: <Home /> },
+      { path: "/character", element: <Characters /> },
+      { path: "/characterDetails/:id", element: <CharacterDetails /> },
     ],
   },
 ]);
